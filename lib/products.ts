@@ -11,6 +11,7 @@ export interface Product {
   brand: string;
   featured?: boolean;
   consultFlavors?: boolean;
+  bulkPrice?: { minQty: number; priceEach: number };
 }
 
 export const products: Product[] = [
