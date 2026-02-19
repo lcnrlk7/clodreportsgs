@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import {
   MapPin,
   MessageCircle,
@@ -27,8 +28,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mb-3 text-sm leading-relaxed text-muted-foreground">
-              Sua loja de pods e vapes em Sao Luis do Maranhao. Produtos
-              originais com entrega rapida e total sigilo.
+              Sua loja digital em Sao Luis do Maranhao. Produtos
+              originais com entrega rapida e atendimento personalizado.
             </p>
             <a
               href="https://instagram.com/cloudpodslz"
@@ -71,15 +72,19 @@ export function Footer() {
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                 <span>
-                  Produto exclusivo para maiores de 18 anos. Venda proibida para
-                  menores.
+                  Produtos destinados exclusivamente a maiores de 18 anos conforme legislacao vigente.
                 </span>
               </div>
               <div className="flex items-start gap-2 text-sm text-muted-foreground">
                 <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                 <span>
-                  Mantemos total sigilo sobre suas compras. Embalagem discreta
-                  garantida.
+                  Embalagem padrao e entrega com total privacidade para nossos clientes.
+                </span>
+              </div>
+              <div className="flex items-start gap-2 text-sm text-muted-foreground">
+                <ShieldCheck className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                <span>
+                  Pagamento seguro via PIX com confirmacao automatica.
                 </span>
               </div>
             </div>
@@ -88,9 +93,17 @@ export function Footer() {
 
         <div className="mt-8 border-t border-border pt-6 text-center">
           <p className="text-xs text-muted-foreground">
-            CloudPod SLZ - Todos os direitos reservados. Produto destinado
-            exclusivamente a maiores de 18 anos.
+            {"© 2026 CloudPod SLZ - CNPJ: 00.000.000/0001-00 - Todos os direitos reservados."}
           </p>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Uso restrito a maiores de 18 anos.
+          </p>
+          <Link
+            href="/politica-privacidade"
+            className="mt-2 inline-block text-xs text-primary hover:underline"
+          >
+            Politica de Privacidade
+          </Link>
         </div>
       </div>
     </footer>

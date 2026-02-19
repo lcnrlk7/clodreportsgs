@@ -7,9 +7,31 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "CloudPod SLZ - Pods & Vapes em Sao Luis",
+  title: "CloudPod SLZ - Loja Online | Entrega em Sao Luis",
   description:
-    "Loja online de pods e vapes com entrega em Sao Luis do Maranhao. Frete de R$5 a R$10 para toda SLZ. Produto exclusivo para maiores de 18 anos. @cloudpodslz",
+    "CloudPod SLZ - Sua loja digital em Sao Luis do Maranhao. Produtos premium com entrega rapida para toda a cidade. Frete acessivel e atendimento personalizado. Compre online com seguranca.",
+  keywords: ["loja online", "sao luis", "maranhao", "entrega rapida", "cloudpod", "produtos premium"],
+  authors: [{ name: "CloudPod SLZ" }],
+  creator: "CloudPod SLZ",
+  publisher: "CloudPod SLZ",
+  category: "shopping",
+  classification: "Shopping",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: "CloudPod SLZ - Loja Online em Sao Luis",
+    description: "Sua loja digital com entrega rapida em Sao Luis do Maranhao. Produtos de qualidade com atendimento personalizado.",
+    url: "https://www.cloudpodslz.shop",
+    siteName: "CloudPod SLZ",
+    locale: "pt_BR",
+    type: "website",
+  },
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",

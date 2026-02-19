@@ -45,7 +45,7 @@ export function Header({
       <div className="bg-primary px-4 py-2 text-center">
         <p className="flex items-center justify-center gap-2 text-xs font-semibold tracking-wide text-primary-foreground md:text-sm">
           <Clock className="h-3.5 w-3.5" />
-          ENTREGAS ONLINE ATE AS 2H DA MANHA - Pedidos abertos agora!
+          ENTREGAS ONLINE ATE AS 2H DA MANHA - Pedidos abertos agora
         </p>
       </div>
       <div className="mx-auto max-w-7xl px-3 md:px-4">
