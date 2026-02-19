@@ -128,6 +128,14 @@ export function ProductCard({ product, onViewDetails }: ProductCardProps) {
             )}
           </div>
 
+          {product.bulkPrice && (
+            <div className="rounded-md bg-amber-50 px-2 py-1">
+              <span className="text-[10px] font-semibold text-amber-800 md:text-[11px]">
+                {"Leve " + product.bulkPrice.minQty + " por R$ " + product.bulkPrice.priceEach.toFixed(2).replace(".", ",") + " cada"}
+              </span>
+            </div>
+          )}
+
           <Button
             size="sm"
             className={`w-full text-[11px] transition-all md:text-xs ${

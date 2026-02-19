@@ -166,10 +166,12 @@ export function ProductDetail({ product, onClose, onCheckout }: ProductDetailPro
 
               {/* Price & Quantity */}
               <div className="mb-4 rounded-xl bg-secondary p-4">
-                <div className="mb-3 flex items-baseline gap-2">
+                <div className="mb-1 flex items-baseline gap-2">
                   <span className="text-3xl font-bold text-foreground">
                     {"R$ " +
-                      (product.price * quantity).toFixed(2).replace(".", ",")}
+                      (product.bulkPrice && quantity >= product.bulkPrice.minQty
+                        ? (product.bulkPrice.priceEach * quantity).toFixed(2).replace(".", ",")
+                        : (product.price * quantity).toFixed(2).replace(".", ","))}
                   </span>
                   {product.originalPrice && (
                     <span className="text-sm text-muted-foreground line-through">
@@ -180,6 +182,19 @@ export function ProductDetail({ product, onClose, onCheckout }: ProductDetailPro
                     </span>
                   )}
                 </div>
+                {product.bulkPrice && (
+                  <div className={`mb-2 rounded-md px-2 py-1 ${quantity >= product.bulkPrice.minQty ? "bg-green-100" : "bg-amber-50"}`}>
+                    {quantity >= product.bulkPrice.minQty ? (
+                      <span className="text-xs font-semibold text-green-700">
+                        {"Promo aplicada! R$ " + product.bulkPrice.priceEach.toFixed(2).replace(".", ",") + " cada"}
+                      </span>
+                    ) : (
+                      <span className="text-xs font-semibold text-amber-800">
+                        {"Leve " + product.bulkPrice.minQty + " ou mais por R$ " + product.bulkPrice.priceEach.toFixed(2).replace(".", ",") + " cada!"}
+                      </span>
+                    )}
+                  </div>
+                )}
 
                 <div className="flex items-center gap-3">
                   <span className="text-sm text-muted-foreground">Qtd:</span>
